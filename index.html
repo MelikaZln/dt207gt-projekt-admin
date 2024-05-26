@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Logga in</title> 
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ <!-- Formulär för inloggning med ett unikt ID -->
+        <h1>Logga in</h1>
+        <form id="loginForm">
+            <label class="uppgift" for="loginUsername">Användarnamn: </label>
+            <input type="text" id="loginUsername" name="username" required> <br> <br>  
+            <label class="uppgift" for="loginPassword">Lösenord: </label>
+            <input type="password" id="loginPassword" name="password" required> <br> <br>  
+            <button type="button" onclick="loginUser()">Logga in</button> 
+        </form>
+
+     <!-- External JavaScript-fil-->
+    <script src="main.js"></script> 
+
+</body>
+</html>
