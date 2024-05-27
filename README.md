@@ -25,3 +25,26 @@ DOMContentLoaded-händelse: En händelse som triggas när DOM har laddats helt. 
 Så det var script till första sidan där admin loggar in, efter att ha loggat in kommer man till undersida.html och här nedanför beskrivs scriptundersida.js: 
 
 På denna sida kan man se alla bokningar, tabort eller redigera menuitem och lägga till ny menu item till slut ska man logga ut. 
+I denna kod har jag olika funktioner här nedanför beskriver jag dem.
+
+getToken(): en funktion som hämtar JWT-token från localStorage och returnerar det.
+
+createDeleteButton(): En funktion som skapar en "Ta bort" -knapp för ett visst menyalternativ (item) och kategori.
+
+deleteMenuItem(id, category):  En funktion för att ta bort ett menyalternativ från servern genom en DELETE-begäran till API. Den använder JWT-token för att autentisera begäran.
+
+createUpdateButton(): En funktion som skapar en "Uppdatera" -knapp för ett visst menyalternativ och kategori.
+
+updateMenuItem(id, category): En funktion för att uppdatera ett menyalternativ genom att först hämta det befintliga alternativet från servern, sedan visa ett formulär för användaren att ändra informationen och slutligen skicka de nya uppgifterna till servern via en PUT-begäran till API
+
+getMenu(): En funktion som hämtar menyalternativen för olika kategorier från servern och renderar dem på webbsidan. Den inkluderar även "Ta bort" och "Uppdatera" -knappar för varje menyalternativ.
+
+checkLoggedIn(): En funktion för att kontrollera om användaren är inloggad genom att kontrollera JWT-token i localStorage och agera baserat på det. Den ändrar också välkomstmeddelandet på sidan baserat på användarens namn.
+
+addMenuItem(): En funktion för att lägga till ett nytt menyalternativ genom att skicka dess information till servern via en POST-begäran till API
+
+getBookings():  En funktion för att hämta bokningar från servern och visa dem på sidan.
+
+capitalize(str): En hjälpfunktion för att kapitalisera första bokstaven i en sträng.
+
+DOMContentLoaded event listener:  En händelsehanterare som körs när DOM-trädet är helt laddat. Den använder sig av flera funktioner för att initialisera sidan när den laddas, inklusive att hämta menyalternativ, kontrollera inloggningstillstånd och hämta bokningar.
