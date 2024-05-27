@@ -19,3 +19,9 @@ getToken(): är en funktion som hämtar JWT-token från webbläsarens localStora
 checkLoggedIn():  En funktion som körs när sidan laddas för att kontrollera om en admin är inloggad. Den använder getToken()
 för att hämta JWT-token från localStorage. Om en token finns och användaren är på en skyddad sida (till exempel "undersida.html"), 
 välkomnas användaren och sidan stannar kvar. Annars omdirigeras användaren till inloggningssidan ("index.html")
+
+DOMContentLoaded-händelse: En händelse som triggas när DOM har laddats helt. Inuti denna händelsefunktion anropas checkLoggedIn() för att kontrollera användarens inloggningstillstånd när sidan laddas.
+
+Så det var script till första sidan där admin loggar in, efter att ha loggat in kommer man till undersida.html och här nedanför beskrivs scriptundersida.js: 
+
+På denna sida kan man se alla bokningar, tabort eller redigera menuitem och lägga till ny menu item till slut ska man logga ut. 
