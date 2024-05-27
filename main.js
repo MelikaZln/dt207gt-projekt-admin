@@ -66,7 +66,7 @@ function checkLoggedIn() {
     const token = getToken();
     const currentPage = window.location.pathname.split("/").pop();
     if (currentPage === "undersida.html" && !token) {
-        window.location.href = "index1.html";
+        window.location.href = "index.html";
     } else if (token) {
         const tokenPayload = JSON.parse(atob(token.split('.')[1]));
         const username = tokenPayload.username;
